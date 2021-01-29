@@ -27,3 +27,9 @@
 
 
 <br>
+
+<% if current_user %>
+  <%= link_to 'Log out', session_path(current_user), method: :delete %>
+<% else %>
+  <%= link_to 'Log in', new_session_path %>
+<% end %>
